@@ -1,32 +1,29 @@
 package org.jebtk.database;
 
-
-
-
 /**
  * Service for permanent database conneciton.
  *
  * @author Antony Holmes Holmes
  *
  */
-public class DatabaseService  {
-	private static final DatabaseService INSTANCE = new DatabaseService();
+public class DatabaseService {
+  private static final DatabaseService INSTANCE = new DatabaseService();
 
-	public static final DatabaseService getInstance() {
-		return INSTANCE;
-	}
+  public static final DatabaseService getInstance() {
+    return INSTANCE;
+  }
 
-	private DatabaseConnection database = null;
+  private DatabaseConnection database = null;
 
-	private DatabaseService() {
-		// do nothing
-	}
+  private DatabaseService() {
+    // do nothing
+  }
 
-	public final void setDatabase(DatabaseConnection database) {
-		this.database = database;
-	}
-	
-	public final DatabaseConnection getDatabase() {
-		return database;
-	}
+  public final void setDatabase(DatabaseConnection database) {
+    this.database = database;
+  }
+
+  public final DatabaseConnection getDatabase() {
+    return database;
+  }
 }
