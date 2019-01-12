@@ -4,7 +4,7 @@ package org.jebtk.database.query;
  * Instance of FROM for use with DELETE. This this cannot perform joins or
  * orders.
  * 
- * @author Antony Holmes Holmes
+ * @author Antony Holmes
  *
  */
 public class DeleteFromQuery extends FromQuery {

@@ -3,7 +3,7 @@ package org.jebtk.database;
 /**
  * Service for permanent database conneciton.
  *
- * @author Antony Holmes Holmes
+ * @author Antony Holmes
  *
  */
 public class DatabaseService {

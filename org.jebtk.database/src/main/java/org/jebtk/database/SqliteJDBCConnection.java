@@ -8,7 +8,7 @@ import java.sql.SQLException;
 /**
  * Sqlite connectivity through JDBC.
  * 
- * @author Antony Holmes Holmes
+ * @author Antony Holmes
  *
  */
 public class SqliteJDBCConnection extends JDBCConnection {

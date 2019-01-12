@@ -8,7 +8,7 @@ import java.util.List;
  * Wrapper for statements from different database interfaces providing a simple
  * subset of features.
  * 
- * @author Antony Holmes Holmes
+ * @author Antony Holmes
  *
  */
 public abstract class DatabaseStatement {

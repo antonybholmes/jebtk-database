@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Pseudo table designed for iterating over once.
  * 
- * @author Antony Holmes Holmes
+ * @author Antony Holmes
  *
  */
 public class ResultsSetTable {
