@@ -1,6 +1,6 @@
 package org.jebtk.database;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -13,9 +13,9 @@ import java.sql.SQLException;
  */
 public class SqliteJDBCConnection extends JDBCConnection {
 
-  private File mFile;
+  private Path mFile;
 
-  public SqliteJDBCConnection(File file) throws SQLException {
+  public SqliteJDBCConnection(Path file) throws SQLException {
     super(getSqliteConnection(file));
 
     mFile = file;
@@ -23,11 +23,11 @@ public class SqliteJDBCConnection extends JDBCConnection {
     System.err.println("Loading SQLite DB " + file);
   }
 
-  public File getFile() {
+  public Path getFile() {
     return mFile;
   }
 
-  public static Connection getSqliteConnection(File file) throws SQLException {
+  public static Connection getSqliteConnection(Path file) throws SQLException {
     try {
       Class.forName("org.sqlite.JDBC");
     } catch (ClassNotFoundException e) {
@@ -36,7 +36,7 @@ public class SqliteJDBCConnection extends JDBCConnection {
 
     try {
       return DriverManager
-          .getConnection("jdbc:sqlite:" + file.getAbsolutePath());
+          .getConnection("jdbc:sqlite:" + file.toAbsolutePath());
     } catch (SQLException e) {
       throw new SQLException(e.getMessage());
     }
